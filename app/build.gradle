@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace 'rpt.com.base'
-    compileSdk 34
+    compileSdk 36
 
     defaultConfig {
         minSdk 24
