@@ -22,7 +22,7 @@ import com.lorenzofelletti.permissions.dispatcher.dsl.doOnDenied
 import com.lorenzofelletti.permissions.dispatcher.dsl.doOnGranted
 import com.lorenzofelletti.permissions.dispatcher.dsl.withRequestCode
 
-class BaseActivity : AppCompatActivity() {
+open class BaseActivity : AppCompatActivity() {
 
     private lateinit var appUpdateManager: AppUpdateManager
     private lateinit var installStateUpdatedListener: InstallStateUpdatedListener
