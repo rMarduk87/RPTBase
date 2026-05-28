@@ -1,16 +1,12 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
-    id 'androidx.navigation.safeargs.kotlin'
+    id 'maven-publish'
 }
 
 android {
     namespace 'rpt.com.base'
-    compileSdk {
-        version = release(37) {
-            minorApiLevel = 1
-        }
-    }
+    compileSdk 34
 
     defaultConfig {
         minSdk 24
@@ -34,11 +30,28 @@ android {
     }
     buildFeatures {
         viewBinding true
-        buildConfig true
     }
     packaging {
         resources {
             excludes += ['META-INF/DEPENDENCIES', 'META-INF/LICENSE', 'META-INF/LICENSE.txt', 'META-INF/license.txt', 'META-INF/NOTICE', 'META-INF/NOTICE.txt', 'META-INF/notice.txt', 'META-INF/ASL2.0']
+        }
+    }
+
+    publishing {
+        singleVariant("release")
+    }
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                groupId = 'com.github.rMarduk87'
+                artifactId = 'base'
+                version = '1.0.0'
+
+                from components.release
+            }
         }
     }
 }
