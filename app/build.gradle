@@ -48,7 +48,7 @@ afterEvaluate {
             release(MavenPublication) {
                 groupId = 'com.github.rMarduk87'
                 artifactId = 'base'
-                version = '1.0.0'
+                version = '1.0.1.2'
 
                 from components.release
             }

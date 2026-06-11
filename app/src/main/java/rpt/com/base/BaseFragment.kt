@@ -15,7 +15,7 @@ import androidx.viewbinding.ViewBinding
 abstract class BaseFragment<VB : ViewBinding>(private val inflate: Inflate<VB>,
                                               private val hideBars: Boolean) : Fragment() {
 
-    private var _binding: VB? = null
+    protected var _binding: VB? = null
     protected val binding get() = _binding!!
 
 
