@@ -1,0 +1,4 @@
+- [x] Update `libs.versions.toml` with Compose dependencies
+- [x] Enable Jetpack Compose in `app/build.gradle`
+- [x] Refactor `BaseJetComposeFragment.kt` to use `ComposeView`
+- [x] Verify build and implementation
